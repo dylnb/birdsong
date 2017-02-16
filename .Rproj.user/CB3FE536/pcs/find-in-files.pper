@@ -1,0 +1,10 @@
+{
+    "dialog-state" : {
+        "caseSensitive" : false,
+        "filePatterns" : [
+        ],
+        "path" : "~/Dropbox/Classes/Monkeys/Birds",
+        "query" : "notes_seq",
+        "regex" : false
+    }
+}

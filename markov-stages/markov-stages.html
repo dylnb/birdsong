@@ -1,0 +1,52 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="generator" content="R package animation 2.2">
+	<title>Animations Using the R Language</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/scianimator.css" />
+	<link rel="stylesheet" href="css/shCore.css" />
+	<link rel="stylesheet" href="css/shThemeDefault.css" />
+
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/jquery.scianimator.min.js"></script>
+	<script src="js/shCore.js"></script>
+	<script src="js/shAutoloader.js"></script>
+
+</head>
+<body>
+
+	<div class="scianimator"><div id="Rplot" style="display: inline-block;"></div></div>
+	<div class="scianimator" style="width: 800px;"><pre class="brush: r">## Animations generated in R version 3.0.1 (2013-05-16) using the package animation
+library(ggplot2)
+library(reshape2)
+library(plyr)
+library(pheatmap)
+library(data.table)
+library(miscTools)
+library(animation)
+library(qgraph)
+library(RMySQL)
+library(DBI)
+par(mar = c(4, 4, 0.5, 0.5))
+ani.options(interval = 2)
+lapply(mats, function(m) qgraph(m[[1]], edge.labels = TRUE, 
+    edge.label.cex = 0.5, labels = m[[2]]$cluster, label.norm = "OOOO", 
+    vsize = m[[2]]$count/12000 * 4, vTrans = 50, layout = "circle"))
+## R version 3.0.1 (2013-05-16)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## Other packages: ggplot2 0.9.3.1, reshape2 1.2.2, plyr 1.8, pheatmap 0.7.7, data.table 1.8.10,
+## miscTools 0.6-16, animation 2.2, qgraph 1.2.3, RMySQL 0.9-3, DBI 0.2-7</pre></div>
+	<script src="js/Rplot.js"></script>
+<!-- highlight R code -->
+<script type="text/javascript">
+	SyntaxHighlighter.autoloader(
+	  "r    js/shBrushR.js"
+	);
+	SyntaxHighlighter.defaults["toolbar"] = false;
+	SyntaxHighlighter.all();
+</script>
+
+</body>
+</html>
